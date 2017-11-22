@@ -1,7 +1,7 @@
 <?php
 include("../include/session.php");
 if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
-$dbc=mysqli_connect('localhost','','', '') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+$dbc=mysqli_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
 $query='SELECT count(1) as cnt from tr_time where userid = "'.$session->username.'"';
 echo $query;
 $result = mysqli_query($dbc, $query);

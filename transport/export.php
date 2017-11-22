@@ -7,7 +7,7 @@ if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
     header("Expires: 0");
 
 
-    $dbc=mysqli_connect('localhost','','', '') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+    $dbc=mysqli_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
     $query = 'SELECt * FROM tr_no where userid = "'.$session->username.'" ORDER BY id';
     $result = @mysqli_query($dbc, $query);
     $no = array();

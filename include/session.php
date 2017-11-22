@@ -123,7 +123,7 @@ class Session {
             $form->setError($field, "* Neįvestas vartotojo vardas");
         } else {
             /* Check if username is not alphanumeric */
-            if (!eregi("^([0-9a-z])*$", $subuser)) {
+            if (!preg_match("/^([0-9a-z])*$/", $subuser)) {
                 $form->setError($field, "* Vartotojo vardas gali būti sudarytas
                     <br>&nbsp;&nbsp;tik iš raidžių ir skaičių");
             }
@@ -244,7 +244,8 @@ class Session {
             } else if (strlen($subuser) > 30) {
                 $form->setError($field, "* Vartotojo vardas virš 30 simbolių");
             }
-            /* Check if username is not alphanumeric */ else if (!eregi("^([0-9a-z])+$", $subuser)) {
+            /* Check if username is not alphanumeric */
+            else if (!preg_match("/^([0-9a-z])+$/", $subuser)) {
                 $form->setError($field, "* Vartotojo vardas gali būti sudarytas
                     <br>&nbsp;&nbsp;tik iš raidžių ir skaičių");
             }
@@ -269,7 +270,8 @@ class Session {
             if (strlen($subpass) < 4) {
                 $form->setError($field, "* Ne mažiau kaip 4 simboliai");
             }
-            /* Check if password is not alphanumeric */ else if (!eregi("^([0-9a-z])+$", ($subpass = trim($subpass)))) {
+            /* Check if password is not alphanumeric */
+            else if (!preg_match("/^([0-9a-z])+$/", ($subpass = trim($subpass)))) {
                 $form->setError($field, "* Slaptažodis gali būti sudarytas
                     <br>&nbsp;&nbsp;tik iš raidžių ir skaičių");
             }
@@ -287,10 +289,10 @@ class Session {
             $form->setError($field, "* Neįvestas e-pašto adresas");
         } else {
             /* Check if valid email address */
-            $regex = "^[_+a-z0-9-]+(\.[_+a-z0-9-]+)*"
+            $regex = "/^[_+a-z0-9-]+(\.[_+a-z0-9-]+)*"
                     . "@[a-z0-9-]+(\.[a-z0-9-]{1,})*"
-                    . "\.([a-z]{2,}){1}$";
-            if (!eregi($regex, $subemail)) {
+                    . "\.([a-z]{2,}){1}$/";
+            if (!preg_match($regex, $subemail)) {
                 $form->setError($field, "* Klaidingas e-pašto adresas");
             }
             $subemail = stripslashes($subemail);

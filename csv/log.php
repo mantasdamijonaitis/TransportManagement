@@ -11,7 +11,7 @@
                 <td><b>naudotojas</b></td>
             </tr>
             <?php
-            $dbc=mysql_connect('localhost','','') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+            $dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
             mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
             $query = 'SELECT * from Logas order by id desc';
             $result = @mysql_query($query);

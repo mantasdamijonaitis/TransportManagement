@@ -3,7 +3,7 @@ include("../include/session.php");
 if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
     if (isset($_POST['ok']))
     {
-        $dbc=mysqli_connect('localhost','aaa','aaa', 'aaa') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+        $dbc=mysqli_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
         $turinys=file_get_contents($_FILES['csv']['tmp_name']);
         $mas=explode("\r\n",$turinys);
         $m = array();

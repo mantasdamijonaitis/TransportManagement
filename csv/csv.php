@@ -36,7 +36,7 @@ $matica_gera[$i]["Sst"]=$matrica[$i][9];
 
      
     $load_id = false;
-$dbc=mysql_connect('localhost','','') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+$dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
 mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
 
 $check = @mysql_query ('select id as load_id from CSV_load where filename = "'.$_FILES['csv']['name'].'" and filesize = '.$_FILES['csv']['size']);
@@ -67,7 +67,7 @@ mysql_close();
 
 
 
-$dbc=mysql_connect('localhost','','') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+$dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
 mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
 $query = 'SELECT  t.Lie_d,  Max(salis) as Lan, Nam, sum(Men_suma) as Men_suma,  max(Blue_suma) as Blue_suma, max(kodas) as kodas from 
 

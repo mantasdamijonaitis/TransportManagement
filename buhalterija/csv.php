@@ -38,7 +38,7 @@ if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
     //INSERT INTO `stud`.`prad_d` (`ID`, `Ken`, `Lie_d`, `Lie_z`, `Lan`, `Nam`, `War`, `Men`) VALUES (NULL, 'e', '2015-10-06', 'rr', 'fsd', 'fsds', 'sfsdf', 'fsfgs');
 
 
-    $dbc=mysqli_connect('localhost','','', '') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+    $dbc=mysqli_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
 //    mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
 
     //  
@@ -61,7 +61,7 @@ if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
 
 
 
-    $dbc=mysql_connect('localhost','','') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+    $dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
     mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
     $query = 'SELECT  t.Lie_d,  Max(salis) as Lan, Nam, sum(Men_suma) as Men_suma,  max(Blue_suma) as Blue_suma, max(kodas) as kodas from 
 

@@ -9,7 +9,7 @@ Load'u sarasas</title>
 <table>
 <?php
 //prisijungimas prie db
-$dbc=mysql_connect('localhost','','') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
+$dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
 mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
 
 $load = @mysql_query ('select * from CSV_load');
