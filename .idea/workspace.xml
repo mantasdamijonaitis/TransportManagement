@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e47c4-8d46-47b5-a868-cabeb04218af" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buhalterija/csv.php" afterPath="$PROJECT_DIR$/buhalterija/csv.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv/csv.php" afterPath="$PROJECT_DIR$/csv/csv.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv/index.js" afterPath="$PROJECT_DIR$/csv/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv/index.php" afterPath="$PROJECT_DIR$/csv/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,8 +119,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/csv/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+                <state relative-caret-position="99">
+                  <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -132,34 +130,36 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="csv.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="csv.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/csv.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
-                  <caret line="103" column="38" lean-forward="true" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+                <state relative-caret-position="193">
+                  <caret line="103" column="40" lean-forward="false" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
                   <folding>
-                    <marker date="1511704074884" expanded="true" signature="952:1052" ph="select id as... CSV_load" />
-                    <marker date="1511704074884" expanded="true" signature="1204:1331" ph="insert into CSV_load... " />
-                    <marker date="1511704074884" expanded="true" signature="1368:1407" ph="select max(i... CSV_load" />
-                    <marker date="1511704074884" expanded="true" signature="1634:2068" ph="INSERT INTO prad_d... " />
-                    <marker date="1511704074884" expanded="true" signature="2212:3376" ph="SELECT t.Lie... Lie_d" />
-                    <marker date="1511704074884" expanded="true" signature="2339:2882" ph="SELECT Lie_d... prad_d" />
-                    <marker date="1511704074884" expanded="true" signature="2623:2732" ph="/*TRINTI PO " />
-                    <marker date="1511704074884" expanded="true" signature="2821:2849" ph="/*and load_i... " />
-                    <marker date="1511704074884" expanded="true" signature="2895:3267" ph="SELECT Lie_d... prad_d" />
-                    <marker date="1511704074884" expanded="true" signature="3205:3233" ph="/*and load_i... " />
-                    <marker date="1511704074884" expanded="true" signature="4682:4757" ph="insert into Logas... " />
+                    <marker date="1511706037974" expanded="true" signature="952:1052" ph="select id as... CSV_load" />
+                    <marker date="1511706037974" expanded="true" signature="1204:1331" ph="insert into CSV_load... " />
+                    <marker date="1511706037974" expanded="true" signature="1368:1407" ph="select max(i... CSV_load" />
+                    <marker date="1511706037974" expanded="true" signature="1634:2068" ph="INSERT INTO prad_d... " />
+                    <marker date="1511706037974" expanded="true" signature="2212:3376" ph="SELECT t.Lie... Lie_d" />
+                    <marker date="1511706037974" expanded="true" signature="2339:2882" ph="SELECT Lie_d... prad_d" />
+                    <marker date="1511706037974" expanded="true" signature="2623:2732" ph="/*TRINTI PO " />
+                    <marker date="1511706037974" expanded="true" signature="2821:2849" ph="/*and load_i... " />
+                    <marker date="1511706037974" expanded="true" signature="2895:3267" ph="SELECT Lie_d... prad_d" />
+                    <marker date="1511706037974" expanded="true" signature="3205:3233" ph="/*and load_i... " />
+                    <marker date="1511706037974" expanded="true" signature="4682:4757" ph="insert into Logas... " />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/csv/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="19" column="83" lean-forward="false" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
-                  <folding />
+                <state relative-caret-position="396">
+                  <caret line="24" column="128" lean-forward="false" selection-start-line="24" selection-start-column="128" selection-end-line="24" selection-end-column="128" />
+                  <folding>
+                    <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -212,8 +212,8 @@
         <option value="$PROJECT_DIR$/buhalterija/csv.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/csv/csv.php" />
-        <option value="$PROJECT_DIR$/csv/index.php" />
         <option value="$PROJECT_DIR$/csv/index.js" />
+        <option value="$PROJECT_DIR$/csv/index.php" />
       </list>
     </option>
   </component>
@@ -370,12 +370,12 @@
       <workItem from="1511451166903" duration="2284000" />
       <workItem from="1511461046686" duration="13000" />
       <workItem from="1511693018353" duration="211000" />
-      <workItem from="1511693356319" duration="12018000" />
+      <workItem from="1511693356319" duration="15454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18654000" />
+    <option name="totallyTimeSpent" value="22090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -416,7 +416,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1511706037974" expanded="true" signature="952:1052" ph="select id as... CSV_load" />
+            <marker date="1511706037974" expanded="true" signature="1204:1331" ph="insert into CSV_load... " />
+            <marker date="1511706037974" expanded="true" signature="1368:1407" ph="select max(i... CSV_load" />
+            <marker date="1511706037974" expanded="true" signature="1634:2068" ph="INSERT INTO prad_d... " />
+            <marker date="1511706037974" expanded="true" signature="2212:3376" ph="SELECT t.Lie... Lie_d" />
+            <marker date="1511706037974" expanded="true" signature="2339:2882" ph="SELECT Lie_d... prad_d" />
+            <marker date="1511706037974" expanded="true" signature="2623:2732" ph="/*TRINTI PO " />
+            <marker date="1511706037974" expanded="true" signature="2821:2849" ph="/*and load_i... " />
+            <marker date="1511706037974" expanded="true" signature="2895:3267" ph="SELECT Lie_d... prad_d" />
+            <marker date="1511706037974" expanded="true" signature="3205:3233" ph="/*and load_i... " />
+            <marker date="1511706037974" expanded="true" signature="4682:4757" ph="insert into Logas... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -536,7 +548,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1511706037974" expanded="true" signature="952:1052" ph="select id as... CSV_load" />
+            <marker date="1511706037974" expanded="true" signature="1204:1331" ph="insert into CSV_load... " />
+            <marker date="1511706037974" expanded="true" signature="1368:1407" ph="select max(i... CSV_load" />
+            <marker date="1511706037974" expanded="true" signature="1634:2068" ph="INSERT INTO prad_d... " />
+            <marker date="1511706037974" expanded="true" signature="2212:3376" ph="SELECT t.Lie... Lie_d" />
+            <marker date="1511706037974" expanded="true" signature="2339:2882" ph="SELECT Lie_d... prad_d" />
+            <marker date="1511706037974" expanded="true" signature="2623:2732" ph="/*TRINTI PO " />
+            <marker date="1511706037974" expanded="true" signature="2821:2849" ph="/*and load_i... " />
+            <marker date="1511706037974" expanded="true" signature="2895:3267" ph="SELECT Lie_d... prad_d" />
+            <marker date="1511706037974" expanded="true" signature="3205:3233" ph="/*and load_i... " />
+            <marker date="1511706037974" expanded="true" signature="4682:4757" ph="insert into Logas... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -951,22 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="19" column="83" lean-forward="false" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv/csv.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -975,11 +983,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/csv/csv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="103" column="40" lean-forward="false" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+          <folding>
+            <marker date="1511706037974" expanded="true" signature="952:1052" ph="select id as... CSV_load" />
+            <marker date="1511706037974" expanded="true" signature="1204:1331" ph="insert into CSV_load... " />
+            <marker date="1511706037974" expanded="true" signature="1368:1407" ph="select max(i... CSV_load" />
+            <marker date="1511706037974" expanded="true" signature="1634:2068" ph="INSERT INTO prad_d... " />
+            <marker date="1511706037974" expanded="true" signature="2212:3376" ph="SELECT t.Lie... Lie_d" />
+            <marker date="1511706037974" expanded="true" signature="2339:2882" ph="SELECT Lie_d... prad_d" />
+            <marker date="1511706037974" expanded="true" signature="2623:2732" ph="/*TRINTI PO " />
+            <marker date="1511706037974" expanded="true" signature="2821:2849" ph="/*and load_i... " />
+            <marker date="1511706037974" expanded="true" signature="2895:3267" ph="SELECT Lie_d... prad_d" />
+            <marker date="1511706037974" expanded="true" signature="3205:3233" ph="/*and load_i... " />
+            <marker date="1511706037974" expanded="true" signature="4682:4757" ph="insert into Logas... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/csv/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="99">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="128" lean-forward="false" selection-start-line="24" selection-start-column="128" selection-end-line="24" selection-end-column="128" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

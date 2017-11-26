@@ -1,34 +1,34 @@
-    $("#fileForm").submit(function(event) {
-        var encodedData = new FormData($("#fileForm")[0]);
-        var encodedType = $(this).attr('method');
-        var encodedUrl = $(this).attr('action');
-        console.log("encodedData", encodedData);
-        console.log("encodedType", encodedType);
-        console.log("encodedUrl", encodedUrl);
-        $.ajax({
-            processData: false,
-            contentType: false,
-            data: new FormData($("#fileForm")[0]),
-            type: $(this).attr('method'),
-            url: $(this).attr('action'),
-            success: function(response) {
-               console.log(response);
-            }
-        });
-        return false;
-    });
-    /*console.log("receivedObject", receivedObject);
+var drawTable = function (receivedData) {
+    console.log("receivedData", receivedData);
     var dataDisplay = $("#dataDisplay");
-    console.log("display", dataDisplay);*/
-    /*$("#dataDisplay").DataTable({
-        data: receivedObject,
+    dataDisplay.css("display", "table")
+    $("#dataDisplay").DataTable({
+        data: receivedData,
         columns: [
-            'Data',
-            'Litrai',
-            'Spidometras',
-            'Šalis',
-            'Ad blue suma',
-            'Vairuotojo ID'
+            { data: 'date' },
+            { data: 'liters' },
+            { data: 'speedometer' },
+            { data: 'country' },
+            { data : 'adBlueSum' },
+            { data : 'driverId' }
         ]
-    });*/
+    });
+};
+
+$("#fileForm").submit(function (event) {
+    $.ajax({
+        processData: false,
+        contentType: false,
+        data: new FormData($("#fileForm")[0]),
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        success: function (response) {
+            var objResponse = JSON.parse(response);
+            console.log("objResponse", objResponse)
+            window.drawTable(objResponse);
+        }
+    });
+    return false;
+});
+
 

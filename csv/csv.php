@@ -113,4 +113,4 @@ $log='insert into Logas (data, ip) values (NOW(),\''.$_SERVER['REMOTE_ADDR'].'\'
 mysqli_close($dbc);*/
 
 ?>
-<?php echo json_encode( $resultArray ); ?>;
+<?php echo json_encode( $resultArray ); ?>
