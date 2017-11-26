@@ -1,14 +1,10 @@
 <?php
 include("../include/session.php");
-//Jei prisijunges Administratorius ar Valdytojas vykdomas operacija3 kodas
 if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
     if (isset($_POST['ok']))
     {
-    //print_r($_POST);
     $turinys=file_get_contents($_FILES['csv']['tmp_name']);
     $eilutes=explode("\r\n",$turinys);
-    //echo $turinys;
-    //print_r($eilutes);
     $outputas[0]=$eilutes[0];
     for ($i=8; $i<count($eilutes);$i++)
     {
@@ -22,7 +18,6 @@ if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
 
     for ($i=0; $i<count($matrica)-1;$i++)
     {
-    //print_r($matrica[$i][1]);
     $matica_gera[$i]["Ken"]=str_replace(" ","",$matrica[$i][1]);
     $matica_gera[$i]["Lie_d"]=$matrica[$i][4];
     $matica_gera[$i]["Lie_z"]=$matrica[$i][5];
@@ -31,8 +26,6 @@ if ($session->logged_in && ($session->isAdmin() || $session->isManager())) {
     $matica_gera[$i]["War"]=$matrica[$i][11];
     $matica_gera[$i]["Men"]=$matrica[$i][12];
     $matica_gera[$i]["Sst"]=$matrica[$i][9];
-
-    //print_r($matica_gera[$i]["Sst"]);
     }
     //Ikelinejami duomenys i DB lentele prad_d
     //INSERT INTO `stud`.`prad_d` (`ID`, `Ken`, `Lie_d`, `Lie_z`, `Lan`, `Nam`, `War`, `Men`) VALUES (NULL, 'e', '2015-10-06', 'rr', 'fsd', 'fsds', 'sfsdf', 'fsfgs');
