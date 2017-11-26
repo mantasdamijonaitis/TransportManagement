@@ -36,39 +36,37 @@ $matica_gera[$i]["Sst"]=$matrica[$i][9];
 
      
     $load_id = false;
-$dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
-mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
+$dbc=mysqli_connect('localhost','root','', 'university_project');
 
-$check = @mysql_query ('select id as load_id from CSV_load where filename = "'.$_FILES['csv']['name'].'" and filesize = '.$_FILES['csv']['size']);
+$check = @mysqli_query ($dbc, 'select id as load_id from CSV_load where filename = "'.$_FILES['csv']['name'].'" and filesize = '.$_FILES['csv']['size']);
 
-while ($row=mysql_fetch_array($check)){
+while ($row=mysqli_fetch_array($check)){
 	$load_id = $row['load_id'];
 	}
 
 if (!$load_id)
 {
-    @mysql_query ('insert into CSV_load (data, filename, filesize) values(now(), "'.$_FILES['csv']['name'].'", '.$_FILES['csv']['size'].')');
-    $rload = @mysql_query ('select max(id) as load_id from CSV_load');
+    @mysqli_query ($dbc, 'insert into CSV_load (data, filename, filesize) values(now(), "'.$_FILES['csv']['name'].'", '.$_FILES['csv']['size'].')');
+    $rload = @mysqli_query ($dbc, 'select max(id) as load_id from CSV_load');
     //while ciklas reikalingas tik del rezultato pasiemimo ??????
-    while ($row=mysql_fetch_array($rload)){
+    while ($row=mysqli_fetch_array($rload)){
             $load_id = $row['load_id'];
             }
 
     for ($i=1; $i<count($matica_gera); $i++)
     {
-    mysql_query ('INSERT INTO prad_d (`Ken`, `Lie_d`, `Lie_z`, `Lan`, `Nam`, `War`, `Men`,`Sst`,load_id) VALUES ("'.$matica_gera[$i]["Ken"].'", "'.$matica_gera[$i]["Lie_d"].'","'.$matica_gera[$i]["Lie_z"].'", "'.$matica_gera[$i]["Lan"].'","'. $matica_gera[$i]["Nam"].'", "'.$matica_gera[$i]["War"].'", "'.str_replace(',','.',$matica_gera[$i]["Men"]).'", "'.$matica_gera[$i]["Sst"].'",'.$load_id.');');
+    mysqli_query ($dbc, 'INSERT INTO prad_d (`Ken`, `Lie_d`, `Lie_z`, `Lan`, `Nam`, `War`, `Men`,`Sst`,load_id) VALUES ("'.$matica_gera[$i]["Ken"].'", "'.$matica_gera[$i]["Lie_d"].'","'.$matica_gera[$i]["Lie_z"].'", "'.$matica_gera[$i]["Lan"].'","'. $matica_gera[$i]["Nam"].'", "'.$matica_gera[$i]["War"].'", "'.str_replace(',','.',$matica_gera[$i]["Men"]).'", "'.$matica_gera[$i]["Sst"].'",'.$load_id.');');
     }
 }
 
-mysql_close();
+mysqli_close($dbc);
 
 
 }
 
 
 
-$dbc=mysql_connect('localhost','root','', 'university_project') or die ('Negaliu prisijungti prie MySQL: ' . mysql_error() );
-mysql_select_db('') or die ('Negaliu pasirinkti duomenu baze: ' . mysql_error() );
+$dbc=mysqli_connect('localhost','root','', 'university_project');
 $query = 'SELECT  t.Lie_d,  Max(salis) as Lan, Nam, sum(Men_suma) as Men_suma,  max(Blue_suma) as Blue_suma, max(kodas) as kodas from 
 
 (
@@ -101,7 +99,7 @@ $query = 'SELECT  t.Lie_d,  Max(salis) as Lan, Nam, sum(Men_suma) as Men_suma,  
 
 ) t
 group by t.Lie_d, t.Nam';
-$result = @mysql_query ($query);
+$result = @mysqli_query ($dbc, $query);
 
 header("Content-type: text/csv");
 header("Content-Disposition: attachment; filename=".$_POST['auto'].".csv");
@@ -109,7 +107,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 echo 'Data;Litrai;Spidometras;Norma;Salis;Miestas;Kortele;Frigo;Ad Blue;Vairuotojai'."\r\n";
-while ($row=mysql_fetch_array($result)){
+while ($row=mysqli_fetch_array($result)){
 	echo $row['Lie_d'].';'.str_replace('.',',',$row['Men_suma']).';;;'.$row['Lan'].';'.$row['Nam'].';;;'.str_replace('.',',',$row['Blue_suma']).";;;".$row['kodas']."\r\n";
 	}
 
@@ -118,8 +116,8 @@ echo 'Viso, ltr;Likutis men. prad;;Likutis men. pab.;;Faktiskai sunaudota degalu
 
 echo "\r\n"."\r\n".'MB'."\r\n".'1 bakas; 2 bakas;;Viso litru'."\r\n";
 $log='insert into Logas (data, ip) values (NOW(),\''.$_SERVER['REMOTE_ADDR'].'\')';
-@mysql_query ($log);
-mysql_close();
+@mysqli_query ($dbc, $log);
+mysqli_close($dbc);
 
 
 
