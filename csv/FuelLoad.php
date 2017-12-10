@@ -21,4 +21,7 @@ class FuelLoad {
 		$this -> remainingLiters = $result['Men'];
 		$this -> loadId = $result['load_id'];
 	}
+
+
+
 }

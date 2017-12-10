@@ -68,8 +68,7 @@
 </div>
 
 <div id="dialog" title="Įrašo redagavimas">
-    <form role="form">
-        <input type="hidden" name="id" id="id"/>
+    <form role="form" id="updateForm">
         <div class="form-group">
             <label>Data</label>
             <input type="text" class="form-control" name="date" id="date"/>
@@ -91,7 +90,7 @@
             <input type="text" class="form-control" name="place" id="place"/>
         </div>
         <div class="btn-group">
-            <button class="btn btn-success">Saugoti</button>
+            <button class="btn btn-success" id="dialogUpdate">Saugoti</button>
             <button class="btn btn-danger" id="dialogDelete">Šalinti</button>
             <button class="btn btn-primary" id="dialogCancel">Atšaukti</button>
         </div>

@@ -2,7 +2,8 @@ var dialog = $( "#dialog" ).dialog({
     autoOpen: false
 });
 
-var idInput = $("#id");
+var entryId = "";
+var loadId = "";
 var dateInput = $("#date");
 var timeInput = $("#time");
 var litersInput = $("#remainingLiters");
@@ -34,21 +35,54 @@ var drawImportedTable = function (receivedData) {
 
     $("#dataDisplay").on('click', 'tbody td', function () {
         var currentRowData = window.importsTable.row(this).data();
-        console.log("currentRowData", currentRowData);
-        console.log("currentRowData.time", currentRowData.time);
-        idInput.val(currentRowData.id);
         dateInput.val(currentRowData.date);
         timeInput.val(currentRowData.time);
         litersInput.val(currentRowData.remainingLiters);
         licensePlatesInput.val(currentRowData.licensePlates);
         placeInput.val(currentRowData.place);
+        entryId = currentRowData.id;
+        loadId = currentRowData.loadId;
         dialog.dialog('open');
     });
 
 };
 
-$("#dialogDelete").on("click", function (e) {
+$("#updateForm").on("submit", function(event) {
+    event.preventDefault();
+    var formData = $('#updateForm').serializeArray().reduce(function(obj, item) {
+        obj[item.name] = item.value;
+        return obj;
+    }, {});
+    console.log("formData", formData);
+    formData.id = entryId;
+    formData.loadId = loadId;
+    $.ajax({
+        url: 'csv_update.php',
+        method: 'POST',
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify(formData),
+        success: function (e) {
+            console.log(e);
+        }
+    });
+    return false;
+});
 
+$("#dialogDelete").on("click", function (e) {
+    e.preventDefault();
+    $.ajax({
+        url: 'csv_delete.php',
+        method: 'POST',
+        data: {
+            id: entryId,
+            loadId: loadId
+        },
+        success: function (e) {
+            drawImportedTable(JSON.parse(e));
+            dialog.dialog("close");
+        }
+    })
 });
 
 $("#dialogCancel").on("click", function(e){
