@@ -50,6 +50,12 @@
     <h3>Naujo CSV failo įkėlimas</h3>
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="alert alert-success" id="import-success" style="display: none;">
+                <strong>Sveikiname!</strong> Importas įvykdytas sėkmingai.
+            </div>
+            <div class="alert alert-danger" id="import-fail" style="display: none">
+                <strong>Klaida!</strong> Nepavyko įvykdyti importo.
+            </div>
             <form id="fileForm" method="post" enctype="multipart/form-data" action="csv.php" target="csviukas">
                 <div class="form-group">
                     <input name="csv" type="file" /> <br>

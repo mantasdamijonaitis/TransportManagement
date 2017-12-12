@@ -1,9 +1,13 @@
 var dialog = $( "#dialog" ).dialog({
-    autoOpen: false
+    autoOpen: false,
+    closeOnEscape: false,
+    open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
 });
 
 var confirmDialog = $("#confirm-dialog").dialog({
-    autoOpen: false
+    autoOpen: false,
+    closeOnEscape: false,
+    open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
 });
 
 var entryId = "";
@@ -99,7 +103,31 @@ $("#accordion").accordion({
     heightStyle: "content"
 });
 
-var performImport = function(formData, type) {
+var wipeFileNamesAndCloseTheDialog = function() {
+    var fileNameRows = $(".fileNameRow");
+    for (var i = 1; i < fileNameRows.length; i++) {
+        fileNameRows.eq(i).remove();
+    }
+    var fileNames = $(".fileName");
+    for (var i = 1; i < fileNames.length; i++) {
+        fileNames.eq(i).remove();
+    }
+    fileNames.eq(0).text('');
+    confirmDialog.dialog("close");
+}
+
+var initializeConfirmButton = function (formData, type) {
+    $("#file-dialog-confirm").on('click', function() {
+        wipeFileNamesAndCloseTheDialog();
+        performImport(formData, type);
+    });
+};
+
+$("#file-dialog-cancel").on('click', function () {
+    wipeFileNamesAndCloseTheDialog();
+});
+
+var allowImport = function(formData, type) {
     $.ajax({
         processData: false,
         contentType: false,
@@ -122,9 +150,32 @@ var performImport = function(formData, type) {
                 }
                 fileNameRow.remove();
                 confirmDialog.dialog("open");
+                initializeConfirmButton(formData, type);
                 return false;
             }
             return true;
+        }
+    });
+};
+
+var performImport = function (formData, type) {
+    $.ajax({
+        processData: false,
+        contentType: false,
+        data: formData,
+        type: type,
+        url: 'csv.php',
+        success: function (response) {
+            var displayElement;
+            if (response) {
+                displayElement = $("#import-fail");
+            } else {
+                displayElement = $("#import-success");
+            }
+            displayElement.css("display", "block");
+            setTimeout(function () {
+                displayElement.css("display", "none");
+            }, 2000);
         }
     });
 };
@@ -133,10 +184,9 @@ $("#fileForm").submit(function (event) {
 
     var formData = new FormData($("#fileForm")[0]);
     var type = $(this).attr('method');
-    if (performImport(formData, type)) {
-        console.log("performImport");
-    } else {
-        console.log("missionabort");
+    var url = $(this).attr('action');
+    if (allowImport(formData, type)) {
+        performImport(formData, type, action);
     }
 
     /*$.ajax({

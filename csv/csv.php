@@ -81,20 +81,7 @@ group by t.Lie_d, t.Nam';
 	echo( "Error description: " . mysqli_error( $dbc ) );
 }
 $result      = @mysqli_query( $dbc, $query );
-$resultArray = array();
-$arrayIndex = 0;
-if ( $result ) {
-	while ( $row = mysqli_fetch_array( $result ) ) {
-		$resultElement         = new stdClass();
-		$resultElement->date   = $row['Lie_d'];
-		$resultElement->liters = $row['Men_suma'];
-		$resultElement->speedometer   = $row['Lan'];
-		$resultElement->country   = $row['Nam'];
-		$resultElement->adBlueSum   = $row['Blue_suma'];
-		$resultElement->driverId   = $row['kodas'];
-		$resultArray[$arrayIndex] = $resultElement;
-	}
-}
+
 /*header("Content-type: text/csv");
 header("Content-Disposition: attachment; filename=".$_POST['auto'].".csv");
 header("Pragma: no-cache");
@@ -113,5 +100,3 @@ $log='insert into Logas (data, ip) values (NOW(),\''.$_SERVER['REMOTE_ADDR'].'\'
 @mysqli_query ($dbc, $log);
 mysqli_close($dbc);*/
 
-?>
-<?php echo json_encode( $resultArray ); ?>
