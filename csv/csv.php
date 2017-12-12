@@ -29,6 +29,9 @@ $check = @mysqli_query( $dbc, 'select id as load_id from CSV_load where filename
 while ( $row = mysqli_fetch_array( $check ) ) {
 	$load_id = $row['load_id'];
 }
+
+
+
 if ( ! $load_id ) {
 	@mysqli_query( $dbc, 'insert into CSV_load (data, filename, filesize) values(now(), "' . $_FILES['csv']['name'] . '", ' . $_FILES['csv']['size'] . ')' );
 	$rload = @mysqli_query( $dbc, 'select max(id) as load_id from CSV_load' );

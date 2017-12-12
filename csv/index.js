@@ -53,7 +53,6 @@ $("#updateForm").on("submit", function(event) {
         obj[item.name] = item.value;
         return obj;
     }, {});
-    console.log("formData", formData);
     formData.id = entryId;
     formData.loadId = loadId;
     $.ajax({
@@ -63,7 +62,8 @@ $("#updateForm").on("submit", function(event) {
         dataType: "json",
         data: JSON.stringify(formData),
         success: function (e) {
-            console.log(e);
+            dialog.dialog("close");
+            drawImportedTable(e);
         }
     });
     return false;

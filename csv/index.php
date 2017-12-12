@@ -57,11 +57,6 @@
                     <input name="ok" type="submit" value="Ikelti" class="btn btn-default" /> <br>
                     <iframe name="csviukas" style="visibility:hidden;display:none"></iframe>
                 </div>
-                <div class="btn-group">
-                    <button type="submit" class="btn btn-success">Saugoti</button>
-                    <button type="button" class="btn btn-success">Šalinti</button>
-                    <button type="button" class="btn btn-primary">Atšaukti</button>
-                </div>
             </form>
         </div>
     </div>
