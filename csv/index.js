@@ -2,6 +2,10 @@ var dialog = $( "#dialog" ).dialog({
     autoOpen: false
 });
 
+var confirmDialog = $("#confirm-dialog").dialog({
+    autoOpen: false
+});
+
 var entryId = "";
 var loadId = "";
 var dateInput = $("#date");
@@ -95,8 +99,47 @@ $("#accordion").accordion({
     heightStyle: "content"
 });
 
-$("#fileForm").submit(function (event) {
+var performImport = function(formData, type) {
     $.ajax({
+        processData: false,
+        contentType: false,
+        data: formData,
+        type: type,
+        url: 'csv_check.php',
+        success: function (response) {
+            console.log("re", response);
+            var receivedData = JSON.parse(response);
+            if (receivedData.message) {
+                var receivedData = JSON.parse(response);
+                var fileNameRow = $(".fileNameRow").eq(0);
+                var fileName = $(".fileName");
+                for (var i = 0; i < receivedData.fileNames.length; i++) {
+                    var fileNameRowClone = fileNameRow.clone();
+                    var fileNameClone = fileName.clone();
+                    fileNameClone.text(receivedData.fileNames[i]);
+                    fileNameRowClone.append(fileNameClone);
+                    $("#fileNameBody").append(fileNameRowClone);
+                }
+                fileNameRow.remove();
+                confirmDialog.dialog("open");
+                return false;
+            }
+            return true;
+        }
+    });
+};
+
+$("#fileForm").submit(function (event) {
+
+    var formData = new FormData($("#fileForm")[0]);
+    var type = $(this).attr('method');
+    if (performImport(formData, type)) {
+        console.log("performImport");
+    } else {
+        console.log("missionabort");
+    }
+
+    /*$.ajax({
         processData: false,
         contentType: false,
         data: new FormData($("#fileForm")[0]),
@@ -106,7 +149,7 @@ $("#fileForm").submit(function (event) {
             var objResponse = JSON.parse(response);
             window.drawImportedTable(objResponse);
         }
-    });
+    });*/
     return false;
 });
 

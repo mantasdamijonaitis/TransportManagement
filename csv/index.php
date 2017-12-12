@@ -92,6 +92,22 @@
     </form>
 </div>
 
+<div id="confirm-dialog">
+    <h4>Tokio dydžio failai jau įkelti!</h4>
+    <h5>Failų pavadinimai:</h5>
+    <table class="table table-bordered table-striped table-responsive table-hover">
+        <tbody id="fileNameBody">
+            <tr class="fileNameRow">
+                <label class="fileName"></label>
+            </tr>
+        </tbody>
+    </table>
+    <div class="btn-group">
+        <button class="btn btn-success" id="file-dialog-confirm">Tęsti importą</button>
+        <button class="btn btn-danger" id="file-dialog-cancel">Nutraukti importą</button>
+    </div>
+</div>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>

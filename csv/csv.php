@@ -25,12 +25,10 @@ for ( $i = 0; $i < count( $matrica ) - 1; $i ++ ) {
 $load_id = false;
 $dbc = mysqli_connect( 'localhost', 'root', '', 'university_project' );
 
-$check = @mysqli_query( $dbc, 'select id as load_id from CSV_load where filename = "' . $_FILES['csv']['name'] . '" and filesize = ' . $_FILES['csv']['size'] );
+$check             = @mysqli_query( $dbc, 'select id as load_id from CSV_load where filename = "' . $_FILES['csv']['name'] . '" and filesize = ' . $_FILES['csv']['size'] );
 while ( $row = mysqli_fetch_array( $check ) ) {
 	$load_id = $row['load_id'];
 }
-
-
 
 if ( ! $load_id ) {
 	@mysqli_query( $dbc, 'insert into CSV_load (data, filename, filesize) values(now(), "' . $_FILES['csv']['name'] . '", ' . $_FILES['csv']['size'] . ')' );
