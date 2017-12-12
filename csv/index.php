@@ -66,6 +66,61 @@
             </form>
         </div>
     </div>
+    <h3>Automobilio ataskaita</h3>
+    <div class="row">
+        <form>
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <td>Likutis mėnesio pabaigoje „Bakas 1“</td>
+                        <td>Likutis mėnesio pabaigoje „Bakas 2“</td>
+                        <td>Spidometro dabartiniai parodymai</td>
+                        <td>Likutis mėnesio pradžioje „Bakas 1“ </td>
+                        <td>Likutis mėnesio pradžioje „Bakas 2“</td>
+                        <td>Spidometro parodymai mėnesio pradžioje</td>
+                        <td>Vairuotojas</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input class="form-control" /></td>
+                        <td><input class="form-control" /></td>
+                        <td><input class="form-control" /></td>
+                        <td><input class="form-control" /></td>
+                        <td><input class="form-control" /></td>
+                        <td><input class="form-control" /></td>
+                        <td><input class="form-control" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn-group">
+                <button class="btn btn-primary">Skaičiuoti</button>
+                <button class="btn btn-success">Kitas</button>
+                <button class="btn btn-warning">Praleisti</button>
+            </div>
+        </form>
+        <h4>Skaičiavimo rezultatai</h4>
+        <table class="table table-bordered table-hover table-striped table-responsive">
+            <thead>
+                <tr>
+                    <td>Faktiškai sunaudota kuro</td>
+                    <td>Nuvažiuota kilometrų</td>
+                    <td>Kuro vidurkis 100 km</td>
+                    <td>Bendras bakų likutis</td>
+                    <td>Ataskaitos pildymo data</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div id="dialog" title="Įrašo redagavimas">
