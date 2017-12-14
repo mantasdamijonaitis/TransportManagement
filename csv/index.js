@@ -207,13 +207,14 @@ var handleLastUsedFilesClicks = function (dataTable) {
     $("#filesDisplay").on('click', 'tbody td', function () {
         var currentRowData = dataTable.row(this).data();
         $.ajax({
-           url: 'data_of_load.php',
+           url: 'cars_of_load.php',
            data: {
-               load_id: currentRowData.id
+               loadId: currentRowData.id
            },
            method: 'POST',
            success: function (m) {
-               window.drawImportedTable(JSON.parse(m));
+               console.log("m", m);
+               //window.drawImportedTable(JSON.parse(m));
            }
         });
     });
