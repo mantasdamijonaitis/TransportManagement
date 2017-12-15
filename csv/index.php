@@ -8,6 +8,17 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/></head>
     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css"/></head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/></head>
+    <style>
+        .currentLoadFill {
+            background-color: #5cb85c;
+        }
+        .previousLoadFill {
+            background-color: #f0ad4e;
+        }
+        .notFilled {
+            background-color: #d9534f;
+        }
+    </style>
 </head>
 <body>
 <div class="container" id="accordion">
@@ -25,23 +36,27 @@
         </div>
         <div class="row" id="table-row" style="display: none">
             <h3>Iš CSV failo gautos reikšmės</h3>
-            <table id="dataDisplay" class="display table table-bordered table-responsive table-hover table-striped">
+            <table id="dataDisplay" class="display table table-bordered table-responsive table-hover">
                 <thead>
                 <tr>
-                    <th>Data</th>
-                    <th>Laikas</th>
-                    <th>Litrai</th>
-                    <th>Valstybiniai numeriai</th>
-                    <th>Šalis</th>
+                    <th>Valst. nr.</th>
+                    <th>Lik. mėn. pab. "Bakas 1"</th>
+                    <th>Lik. mėn. pab. "Bakas 2"</th>
+                    <th>Spidometro dab. par.</th>
+                    <th>Lik. mėn. prad. "Bakas 1"</th>
+                    <th>Lik. mėn. prad. "Bakas 2"</th>
+                    <th>Vairuotojas</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <th>Data</th>
-                    <th>Laikas</th>
-                    <th>Litrai</th>
-                    <th>Valstybiniai numeriai</th>
-                    <th>Šalis</th>
+                    <th>Valst. nr.</th>
+                    <th>Lik. mėn. pab. "Bakas 1"</th>
+                    <th>Lik. mėn. pab. "Bakas 2"</th>
+                    <th>Spidometro dab. par.</th>
+                    <th>Lik. mėn. prad. "Bakas 1"</th>
+                    <th>Lik. mėn. prad. "Bakas 2"</th>
+                    <th>Vairuotojas</th>
                 </tr>
                 </tfoot>
             </table>
@@ -72,6 +87,7 @@
             <table class="table table-bordered table-responsive">
                 <thead>
                     <tr>
+                        <td>Valst. nr.</td>
                         <td>Likutis mėnesio pabaigoje „Bakas 1“</td>
                         <td>Likutis mėnesio pabaigoje „Bakas 2“</td>
                         <td>Spidometro dabartiniai parodymai</td>
@@ -126,24 +142,28 @@
 <div id="dialog" title="Įrašo redagavimas">
     <form role="form" id="updateForm">
         <div class="form-group">
-            <label>Data</label>
-            <input type="text" class="form-control" name="date" id="date"/>
+            <label>Lik. mėn. pab. "Bakas 1"</label>
+            <input type="text" class="form-control" name="firstTankMonthEnd" id="firstTankMonthEnd"/>
         </div>
         <div class="form-group">
-            <label>Laikas</label>
-            <input type="text" class="form-control" name="time" id="time"/>
+            <label>Lik. mėn. pab. "Bakas 2"</label>
+            <input type="text" class="form-control" name="secondTankMonthEnd" id="secondTankMonthEnd"/>
         </div>
         <div class="form-group">
-            <label>Likę litrai</label>
-            <input type="text" class="form-control" name="remainingLiters" id="remainingLiters" />
+            <label>Spidometro dab. par.</label>
+            <input type="text" class="form-control" name="speedometerMonthEnd" id="speedometerMonthEnd" />
         </div>
         <div class="form-group">
-            <label>Valstybiniai numeriai</label>
-            <input type="text" class="form-control" name="licensePlates" id="licensePlates" />
+            <label>Lik. mėn. prad. "Bakas 1"</label>
+            <input type="text" class="form-control" name="firstTankMonthStart" id="firstTankMonthStart" />
         </div>
         <div class="form-group">
-            <label>Vieta</label>
-            <input type="text" class="form-control" name="place" id="place"/>
+            <label>Lik. mėn. prad. "Bakas 2"</label>
+            <input type="text" class="form-control" name="secondTankMonthStart" id="secondTankMonthStart"/>
+        </div>
+        <div class="form-group">
+            <label>Vairuotojas</label>
+            <input type="text" class="form-control" name="driver" id="driver"/>
         </div>
         <div class="btn-group">
             <button class="btn btn-success" id="dialogUpdate">Saugoti</button>

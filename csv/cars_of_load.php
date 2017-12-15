@@ -3,7 +3,6 @@ require_once('vehicle_record.php');
 $dbc = mysqli_connect( 'localhost', 'root', '', 'university_project' );
 mysqli_set_charset($dbc, "utf8");
 $selectedLoadId = $_POST['loadId'];
-echo $selectedLoadId;
 $query = $dbc->prepare(
 	"SELECT DISTINCT Ken FROM prad_d WHERE load_id = ?");
 $query->bind_param('i', $selectedLoadId);
@@ -46,7 +45,7 @@ if (sizeof($vehiclesArray) > 0) {
 		if ($queryResult->num_rows > 0) {
 			while($row = mysqli_fetch_array($row)) {
 				getVehicleDataByLoadIdAndLicensePlates($row['load_d'], $vehicleDataQuery,
-					$vehiclesArray, $vehicleDataArray, 0);
+					$vehiclesArray, $vehicleDataArray, 1);
 				break;
 			}
 		}
@@ -55,8 +54,8 @@ if (sizeof($vehiclesArray) > 0) {
 if (sizeof($vehiclesArray) > 0) {
 	foreach ($vehiclesArray as $licensePlate) {
 		$vehicleData = VehicleRecord::fromLoadIdAndPlates($selectedLoadId, $licensePlate);
+		$vehicleData->order = 2;
 		array_push($vehicleDataArray, $vehicleData);
 	}
 }
-echo 'laba';
 echo json_encode($vehicleDataArray);

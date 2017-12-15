@@ -22,18 +22,38 @@ var drawImportedTable = function (receivedData) {
     console.log("receivedData", receivedData);
     var dataDisplay = $("#table-row");
     dataDisplay.css("display", "block")
-    console.log(window.importsTable);
     if (window.importsTable == null) {
         window.importsTable =
             $("#dataDisplay").DataTable({
                 data: receivedData,
                 columns: [
-                    {data: 'date'},
-                    {data: 'time'},
-                    {data: 'remainingLiters'},
-                    {data: 'licensePlates'},
-                    {data: 'place'},
-                ]
+                    {data: 'vehicle'},
+                    {data: 'firstTankMonthEnd'},
+                    {data: 'secondTankMonthEnd'},
+                    {data: 'speedometerMonthEnd'},
+                    {data: 'firstTankMonthStart'},
+                    {data: 'secondTankMonthStart'},
+                    {data: 'driver'},
+                ],
+                "rowCallback": function(row, data, index) {
+                    var classToAdd = "";
+                    console.log("data order", data.order);
+                    switch (data.order) {
+                        case 0:
+                            classToAdd = "currentLoadFill"
+                            break;
+                        case 1:
+                            classToAdd = "previousLoadFill"
+                            break;
+                        default:
+                            classToAdd = "notFilled"
+                            break;
+                    }
+                    $(row).addClass(classToAdd);
+                    /*console.log("row", row);
+                    console.log("data", data);
+                    console.log("index", index);*/
+                }
             });
     } else {
         window.importsTable.clear();
@@ -213,8 +233,9 @@ var handleLastUsedFilesClicks = function (dataTable) {
            },
            method: 'POST',
            success: function (m) {
+
                console.log("m", m);
-               //window.drawImportedTable(JSON.parse(m));
+               window.drawImportedTable(JSON.parse(m));
            }
         });
     });
