@@ -42,10 +42,10 @@ if (sizeof($vehiclesArray) > 0) {
 		$vehiclesArray, $vehicleDataArray, 0);
 }
 //echo 'Vehicles array size after first iteration ' . sizeof($vehiclesArray);
-$query = $dbc -> prepare("SELECT DISTINCT LoadId FROM auto_data WHERE Vehicle = ? ORDER BY LoadId DESC");
+$query = $dbc -> prepare("SELECT DISTINCT LoadId FROM auto_data WHERE Vehicle = ? AND LoadId < ? ORDER BY LoadId DESC");
 if (sizeof($vehiclesArray) > 0) {
 	foreach ($vehiclesArray as $licensePlate) {
-		$query->bind_param('s', $licensePlate);
+		$query->bind_param('si', $licensePlate, $selectedLoadId);
 		$query->execute();
 		$queryResult = $query->get_result();
 		if ($queryResult->num_rows > 0) {

@@ -31,10 +31,8 @@ if (empty($autoDataJsonRecord->id)) {
 	$previousRecordQuery -> execute();
 	$previousRecordQueryResult = $previousRecordQuery -> get_result();
 	if ($previousRecordQueryResult -> num_rows > 0) {
-
 		$firstRow = mysqli_fetch_assoc($previousRecordQueryResult);
 		$deltaObject = VehicleRecord::getDeltaObject($firstRow, $autoDataJsonRecord);
-
 		$query = $dbc -> prepare(
 			" SELECT * FROM auto_data 
 			WHERE Vehicle = ? AND LoadId > ?");
@@ -50,7 +48,14 @@ if (empty($autoDataJsonRecord->id)) {
 					" UPDATE auto_data
 							SET SpeedometerMonthStart = ?,
 								FirstTankMonthStart = ?,
-								SecondTankMonthStart = ?");
+								SecondTankMonthStart = ?,
+								SpeedometerMonthEnd = ?,
+								FirstTankMonthEnd = ?,
+								SecondTankMonthEnd = ?
+								WHERE Id = ?");
+
+				echo 'before';
+				var_dump($recordToUpdate);
 
 				$recordToUpdate->speedometerMonthStart =
 					$recordToUpdate->speedometerMonthStart +
@@ -62,10 +67,29 @@ if (empty($autoDataJsonRecord->id)) {
 					$recordToUpdate->secondTankMonthStart +
 					$deltaObject -> secondTankMonthStart;
 
-				$updateQuery->bind_param('idd',
+				$recordToUpdate->speedometerMonthEnd =
+					$recordToUpdate->speedometerMonthEnd +
+					$deltaObject -> speedometerMonthStart;
+
+				$recordToUpdate->firstTankMonthEnd =
+					$recordToUpdate->firstTankMonthEnd +
+					$deltaObject -> firstTankMonthStart;
+
+				$recordToUpdate->secondTankMonthEnd =
+					$recordToUpdate->secondTankMonthEnd +
+					$deltaObject -> secondTankMonthStart;
+
+				echo 'after';
+				var_dump($recordToUpdate);
+
+				$updateQuery->bind_param('ddddddi',
 					$recordToUpdate->speedometerMonthStart,
 					$recordToUpdate->firstTankMonthStart,
-					$recordToUpdate->secondTankMonthStart);
+					$recordToUpdate->secondTankMonthStart,
+					$recordToUpdate->speedometerMonthEnd,
+					$recordToUpdate->firstTankMonthEnd,
+					$recordToUpdate->secondTankMonthEnd,
+					$recordToUpdate->id);
 
 				$updateQuery->execute();
 

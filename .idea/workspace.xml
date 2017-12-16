@@ -7,9 +7,7 @@
     <list default="true" id="b40e47c4-8d46-47b5-a868-cabeb04218af" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/csv/auto_data_update.php" afterPath="$PROJECT_DIR$/csv/auto_data_update.php" />
-      <change beforePath="$PROJECT_DIR$/csv/index.js" afterPath="$PROJECT_DIR$/csv/index.js" />
-      <change beforePath="$PROJECT_DIR$/csv/index.php" afterPath="$PROJECT_DIR$/csv/index.php" />
-      <change beforePath="$PROJECT_DIR$/csv/vehicle_record.php" afterPath="$PROJECT_DIR$/csv/vehicle_record.php" />
+      <change beforePath="$PROJECT_DIR$/csv/cars_of_load.php" afterPath="$PROJECT_DIR$/csv/cars_of_load.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -118,19 +116,21 @@
           <file leaf-file-name="auto_data_update.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/csv/auto_data_update.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="577">
-                  <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                <state relative-caret-position="544">
+                  <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
                   <folding>
-                    <marker date="1513432015421" expanded="true" signature="353:534" ph="INSERT INTO auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="353:543" ph="INSERT INTO auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="353:569" ph="INSERT INTO auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="1040:1080" ph="SELECT * FRO... auto_data" />
-                    <marker date="1513432015421" expanded="true" signature="1486:1546" ph="SELECT * FRO... auto_data" />
-                    <marker date="1513432015421" expanded="true" signature="1907:1993" ph="UPDATE auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="1907:2027" ph="UPDATE auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="1907:2029" ph="UPDATE auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="2674:2697" ph="UPDATE auto_data... " />
-                    <marker date="1513432015421" expanded="true" signature="2674:2933" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="353:534" ph="INSERT INTO auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="353:543" ph="INSERT INTO auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="353:569" ph="INSERT INTO auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="1040:1080" ph="SELECT * FRO... auto_data" />
+                    <marker date="1513434978860" expanded="true" signature="1484:1544" ph="SELECT * FRO... auto_data" />
+                    <marker date="1513434978860" expanded="true" signature="1905:1991" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="1905:2025" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="1905:2086" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="1905:2142" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="1905:2144" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="3433:3456" ph="UPDATE auto_data... " />
+                    <marker date="1513434978860" expanded="true" signature="3433:3692" ph="UPDATE auto_data... " />
                   </folding>
                 </state>
               </provider>
@@ -194,8 +194,8 @@
           <file leaf-file-name="vehicle_record.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/csv/vehicle_record.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
-                  <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+                <state relative-caret-position="1534">
+                  <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -204,12 +204,12 @@
           <file leaf-file-name="cars_of_load.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/cars_of_load.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+                <state relative-caret-position="396">
+                  <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
                   <folding>
-                    <marker date="1513423498520" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
-                    <marker date="1513423498520" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
-                    <marker date="1513423498520" expanded="true" signature="1665:1741" ph="SELECT DISTI... auto_data" />
+                    <marker date="1513433477049" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
+                    <marker date="1513433477049" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
+                    <marker date="1513433477049" expanded="true" signature="1665:1756" ph="SELECT DISTI... auto_data" />
                   </folding>
                 </state>
               </provider>
@@ -284,12 +284,12 @@
         <option value="$PROJECT_DIR$/csv/csv.php" />
         <option value="$PROJECT_DIR$/csv/VehicleRecord.php" />
         <option value="$PROJECT_DIR$/csv/FuelLoad.php" />
-        <option value="$PROJECT_DIR$/csv/cars_of_load.php" />
         <option value="$PROJECT_DIR$/csv/index.php" />
         <option value="$PROJECT_DIR$/csv/csv_update.php" />
         <option value="$PROJECT_DIR$/csv/index.js" />
-        <option value="$PROJECT_DIR$/csv/auto_data_update.php" />
+        <option value="$PROJECT_DIR$/csv/cars_of_load.php" />
         <option value="$PROJECT_DIR$/csv/vehicle_record.php" />
+        <option value="$PROJECT_DIR$/csv/auto_data_update.php" />
       </list>
     </option>
   </component>
@@ -460,12 +460,12 @@
       <workItem from="1513174039651" duration="3162000" />
       <workItem from="1513276919393" duration="7420000" />
       <workItem from="1513322513881" duration="2356000" />
-      <workItem from="1513416085575" duration="15919000" />
+      <workItem from="1513416085575" duration="18880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85005000" />
+    <option name="totallyTimeSpent" value="87966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -863,8 +863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/csv/csv.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="3333">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <marker date="1513110177013" expanded="true" signature="964:1064" ph="select id as... CSV_load" />
             <marker date="1513110177013" expanded="true" signature="1217:1344" ph="insert into CSV_load... " />
@@ -874,18 +874,6 @@
             <marker date="1513110177013" expanded="true" signature="2352:2895" ph="SELECT Lie_d... prad_d" />
             <marker date="1513110177013" expanded="true" signature="2636:2745" ph="/*TRINTI PO " />
             <marker date="1513110177013" expanded="true" signature="2908:3280" ph="SELECT Lie_d... prad_d" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv/cars_of_load.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-          <folding>
-            <marker date="1513423498520" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
-            <marker date="1513423498520" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
-            <marker date="1513423498520" expanded="true" signature="1665:1741" ph="SELECT DISTI... auto_data" />
           </folding>
         </state>
       </provider>
@@ -932,30 +920,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/auto_data_update.php">
+    <entry file="file://$PROJECT_DIR$/csv/cars_of_load.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
           <folding>
-            <marker date="1513432015421" expanded="true" signature="353:534" ph="INSERT INTO auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="353:543" ph="INSERT INTO auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="353:569" ph="INSERT INTO auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="1040:1080" ph="SELECT * FRO... auto_data" />
-            <marker date="1513432015421" expanded="true" signature="1486:1546" ph="SELECT * FRO... auto_data" />
-            <marker date="1513432015421" expanded="true" signature="1907:1993" ph="UPDATE auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="1907:2027" ph="UPDATE auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="1907:2029" ph="UPDATE auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="2674:2697" ph="UPDATE auto_data... " />
-            <marker date="1513432015421" expanded="true" signature="2674:2933" ph="UPDATE auto_data... " />
+            <marker date="1513433477049" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
+            <marker date="1513433477049" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
+            <marker date="1513433477049" expanded="true" signature="1665:1756" ph="SELECT DISTI... auto_data" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/csv/vehicle_record.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="1534">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/auto_data_update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+          <folding>
+            <marker date="1513434978860" expanded="true" signature="353:534" ph="INSERT INTO auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="353:543" ph="INSERT INTO auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="353:569" ph="INSERT INTO auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="1040:1080" ph="SELECT * FRO... auto_data" />
+            <marker date="1513434978860" expanded="true" signature="1484:1544" ph="SELECT * FRO... auto_data" />
+            <marker date="1513434978860" expanded="true" signature="1905:1991" ph="UPDATE auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="1905:2025" ph="UPDATE auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="1905:2086" ph="UPDATE auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="1905:2142" ph="UPDATE auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="1905:2144" ph="UPDATE auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="3433:3456" ph="UPDATE auto_data... " />
+            <marker date="1513434978860" expanded="true" signature="3433:3692" ph="UPDATE auto_data... " />
+          </folding>
         </state>
       </provider>
     </entry>
