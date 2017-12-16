@@ -8,7 +8,7 @@ class ReportRow {
 	public $monthStartLitersRemainings;
 	public $monthEndLitersRemainings;
 	public $usedLiters;
-	public $litersAverage;
+	public $litersAverage = 0;
 	public $speedometerMonthStart;
 	public $speedometerMonthEnd;
 	public $importedFrom;
@@ -32,10 +32,13 @@ class ReportRow {
 			$vehicleRecord -> speedometerMonthStart;
 		$reportInstance -> speedometerMonthEnd =
 			$vehicleRecord -> speedometerMonthEnd;
-		$reportInstance -> litersAverage =
-			$reportInstance -> usedLiters * 100 /
-			($reportInstance -> speedometerMonthStart -
-			 $reportInstance -> speedometerMonthEnd);
+		if ($reportInstance -> speedometerMonthStart -
+		    $reportInstance -> speedometerMonthEnd != 0) {
+			$reportInstance->litersAverage =
+				$reportInstance->usedLiters * 100 /
+				( $reportInstance->speedometerMonthStart -
+				  $reportInstance->speedometerMonthEnd );
+		}
 		$reportInstance -> importedFrom =
 			$vehicleRecord -> fileName;
 		return $reportInstance;
