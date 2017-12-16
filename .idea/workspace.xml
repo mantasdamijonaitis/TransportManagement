@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b40e47c4-8d46-47b5-a868-cabeb04218af" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/csv/auto_data_update.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/csv/auto_data_update.php" afterPath="$PROJECT_DIR$/csv/auto_data_update.php" />
       <change beforePath="$PROJECT_DIR$/csv/cars_of_load.php" afterPath="$PROJECT_DIR$/csv/cars_of_load.php" />
+      <change beforePath="$PROJECT_DIR$/csv/csv_update.php" afterPath="$PROJECT_DIR$/csv/csv_update.php" />
       <change beforePath="$PROJECT_DIR$/csv/index.js" afterPath="$PROJECT_DIR$/csv/index.js" />
       <change beforePath="$PROJECT_DIR$/csv/index.php" afterPath="$PROJECT_DIR$/csv/index.php" />
+      <change beforePath="$PROJECT_DIR$/csv/vehicle_record.php" afterPath="$PROJECT_DIR$/csv/vehicle_record.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +27,7 @@
           <file leaf-file-name="csv.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/csv.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3085">
+                <state relative-caret-position="3333">
                   <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
                   <folding>
                     <marker date="1513110177013" expanded="true" signature="964:1064" ph="select id as... CSV_load" />
@@ -79,16 +81,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/csv/index.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="csv_check.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/csv_check.php">
               <provider selected="true" editor-type-id="text-editor">
@@ -101,15 +93,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="csv_update.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="csv_update.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/csv_update.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="33">
-                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="29" />
+                <state relative-caret-position="297">
+                  <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
                   <folding>
-                    <marker date="1513102265137" expanded="true" signature="275:351" ph="UPDATE prad_d... " />
-                    <marker date="1513102265137" expanded="true" signature="275:382" ph="UPDATE prad_d... " />
-                    <marker date="1513102265137" expanded="true" signature="587:625" ph="SELECT * FRO... prad_d" />
+                    <marker date="1513326505107" expanded="true" signature="249:325" ph="UPDATE prad_d... " />
+                    <marker date="1513326505107" expanded="true" signature="249:356" ph="UPDATE prad_d... " />
+                    <marker date="1513326505107" expanded="true" signature="561:599" ph="SELECT * FRO... prad_d" />
                   </folding>
                 </state>
               </provider>
@@ -118,18 +110,8 @@
           <file leaf-file-name="vehicle_record.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/vehicle_record.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/csv/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="39" column="58" lean-forward="false" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+                <state relative-caret-position="595">
+                  <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -138,12 +120,23 @@
           <file leaf-file-name="cars_of_load.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/cars_of_load.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="297">
-                  <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+                <state relative-caret-position="141">
+                  <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
                   <folding>
-                    <marker date="1513323201966" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
-                    <marker date="1513323201966" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
+                    <marker date="1513423498520" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
+                    <marker date="1513423498520" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
+                    <marker date="1513423498520" expanded="true" signature="1665:1741" ph="SELECT DISTI... auto_data" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/csv/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -155,8 +148,8 @@
           <file leaf-file-name="csv.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/csv.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+                <state relative-caret-position="727">
+                  <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
                   <folding>
                     <marker date="1513110177013" expanded="true" signature="964:1064" ph="select id as... CSV_load" />
                     <marker date="1513110177013" expanded="true" signature="1217:1344" ph="insert into CSV_load... " />
@@ -186,11 +179,9 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/csv/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="38" column="84" lean-forward="false" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
-                  <folding>
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-594">
+                  <caret line="60" column="40" lean-forward="false" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -198,9 +189,15 @@
           <file leaf-file-name="auto_data_update.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/csv/auto_data_update.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="1254">
+                  <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+                  <folding>
+                    <marker date="1513417899459" expanded="true" signature="353:534" ph="INSERT INTO auto_data... " />
+                    <marker date="1513417899459" expanded="true" signature="353:543" ph="INSERT INTO auto_data... " />
+                    <marker date="1513417899459" expanded="true" signature="353:569" ph="INSERT INTO auto_data... " />
+                    <marker date="1513417899459" expanded="true" signature="1026:1049" ph="UPDATE auto_data... " />
+                    <marker date="1513417899459" expanded="true" signature="1026:1285" ph="UPDATE auto_data... " />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -210,6 +207,16 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="4059">
                   <caret line="123" column="9" lean-forward="false" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vehicle_record.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/csv/vehicle_record.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1122">
+                  <caret line="57" column="77" lean-forward="false" selection-start-line="57" selection-start-column="77" selection-end-line="57" selection-end-column="77" />
                   <folding />
                 </state>
               </provider>
@@ -228,10 +235,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>l</find>
-      <find>local</find>
-      <find>localhot</find>
-      <find>localho</find>
       <find>localh</find>
       <find>localhos</find>
       <find>localhost</find>
@@ -256,8 +259,12 @@
       <find>new</find>
       <find>drawimpo</find>
       <find>ec</find>
-      <find>echo</find>
       <find>drawImportedTable</find>
+      <find>echo</find>
+      <find>conso</find>
+      <find>ech</find>
+      <find>loadId</find>
+      <find>order</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -277,15 +284,16 @@
         <option value="$PROJECT_DIR$/csv/data_of_load.php" />
         <option value="$PROJECT_DIR$/DataTables/dataTables.editor.min.js" />
         <option value="$PROJECT_DIR$/csv/csv_delete.php" />
-        <option value="$PROJECT_DIR$/csv/csv_update.php" />
         <option value="$PROJECT_DIR$/csv/csv_check.php" />
         <option value="$PROJECT_DIR$/csv/csv.php" />
         <option value="$PROJECT_DIR$/csv/VehicleRecord.php" />
         <option value="$PROJECT_DIR$/csv/FuelLoad.php" />
-        <option value="$PROJECT_DIR$/csv/vehicle_record.php" />
-        <option value="$PROJECT_DIR$/csv/cars_of_load.php" />
-        <option value="$PROJECT_DIR$/csv/index.js" />
+        <option value="$PROJECT_DIR$/csv/csv_update.php" />
+        <option value="$PROJECT_DIR$/csv/auto_data_update.php" />
         <option value="$PROJECT_DIR$/csv/index.php" />
+        <option value="$PROJECT_DIR$/csv/cars_of_load.php" />
+        <option value="$PROJECT_DIR$/csv/vehicle_record.php" />
+        <option value="$PROJECT_DIR$/csv/index.js" />
       </list>
     </option>
   </component>
@@ -322,7 +330,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,6 +351,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,12 +463,13 @@
       <workItem from="1513100737654" duration="11492000" />
       <workItem from="1513174039651" duration="3162000" />
       <workItem from="1513276919393" duration="7420000" />
-      <workItem from="1513322513881" duration="2110000" />
+      <workItem from="1513322513881" duration="2356000" />
+      <workItem from="1513416085575" duration="8228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68840000" />
+    <option name="totallyTimeSpent" value="77314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -525,7 +534,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -813,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,17 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/data_of_load.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1512421492925" expanded="true" signature="216:252" ph="select * fro... prad_d" />
-            <marker date="1512421492925" expanded="true" signature="216:253" ph="select * fro... prad_d" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csv/FuelLoad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -859,31 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/last_uploaded_files.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <marker date="1511712138760" expanded="true" signature="119:221" ph="select id, D... csv_load" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv/cars_of_load.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <marker date="1513323201966" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
-            <marker date="1513323201966" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csv/csv.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state relative-caret-position="3333">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <marker date="1513110177013" expanded="true" signature="964:1064" ph="select id as... CSV_load" />
             <marker date="1513110177013" expanded="true" signature="1217:1344" ph="insert into CSV_load... " />
@@ -897,48 +875,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/vehicle_record.php">
+    <entry file="file://$PROJECT_DIR$/csv/data_of_load.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="66">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1512421492925" expanded="true" signature="216:252" ph="select * fro... prad_d" />
+            <marker date="1512421492925" expanded="true" signature="216:253" ph="select * fro... prad_d" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/index.js">
+    <entry file="file://$PROJECT_DIR$/csv/last_uploaded_files.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="58" lean-forward="false" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="198">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <marker date="1511712138760" expanded="true" signature="119:221" ph="select id, D... csv_load" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/csv/csv_update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="29" />
+        <state relative-caret-position="297">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding>
-            <marker date="1513102265137" expanded="true" signature="275:351" ph="UPDATE prad_d... " />
-            <marker date="1513102265137" expanded="true" signature="275:382" ph="UPDATE prad_d... " />
-            <marker date="1513102265137" expanded="true" signature="587:625" ph="SELECT * FRO... prad_d" />
+            <marker date="1513326505107" expanded="true" signature="249:325" ph="UPDATE prad_d... " />
+            <marker date="1513326505107" expanded="true" signature="249:356" ph="UPDATE prad_d... " />
+            <marker date="1513326505107" expanded="true" signature="561:599" ph="SELECT * FRO... prad_d" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/cars_of_load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+          <folding>
+            <marker date="1513423498520" expanded="true" signature="210:259" ph="SELECT DISTI... prad_d" />
+            <marker date="1513423498520" expanded="true" signature="546:602" ph="SELECT * FRO... prad_d" />
+            <marker date="1513423498520" expanded="true" signature="1665:1741" ph="SELECT DISTI... auto_data" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/csv/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="38" column="84" lean-forward="false" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-594">
+          <caret line="60" column="40" lean-forward="false" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/vehicle_record.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/csv/auto_data_update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1254">
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding>
+            <marker date="1513417899459" expanded="true" signature="353:534" ph="INSERT INTO auto_data... " />
+            <marker date="1513417899459" expanded="true" signature="353:543" ph="INSERT INTO auto_data... " />
+            <marker date="1513417899459" expanded="true" signature="353:569" ph="INSERT INTO auto_data... " />
+            <marker date="1513417899459" expanded="true" signature="1026:1049" ph="UPDATE auto_data... " />
+            <marker date="1513417899459" expanded="true" signature="1026:1285" ph="UPDATE auto_data... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
       </provider>

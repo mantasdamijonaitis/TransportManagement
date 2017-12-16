@@ -12,6 +12,8 @@ var confirmDialog = $("#confirm-dialog").dialog({
 
 var entryId = "";
 var loadId = "";
+var vehicle = "";
+var order = "";
 var dateInput = $("#date");
 var timeInput = $("#time");
 var litersInput = $("#remainingLiters");
@@ -19,7 +21,7 @@ var licensePlatesInput = $("#licensePlates");
 var placeInput = $("#place");
 
 var drawImportedTable = function (receivedData) {
-    console.log("receivedData", receivedData);
+    //console.log("receivedData", receivedData);
     var dataDisplay = $("#table-row");
     dataDisplay.css("display", "block")
     if (window.importsTable == null) {
@@ -29,10 +31,11 @@ var drawImportedTable = function (receivedData) {
                 columns: [
                     {data: 'vehicle'},
                     {data: 'firstTankMonthEnd'},
-                    {data: 'secondTankMonthEnd'},
-                    {data: 'speedometerMonthEnd'},
                     {data: 'firstTankMonthStart'},
+                    {data: 'secondTankMonthEnd'},
                     {data: 'secondTankMonthStart'},
+                    {data: 'speedometerMonthEnd'},
+                    {data: 'speedometerMonthStart'},
                     {data: 'driver'},
                 ],
                 "rowCallback": function(row, data, index) {
@@ -50,9 +53,6 @@ var drawImportedTable = function (receivedData) {
                             break;
                     }
                     $(row).addClass(classToAdd);
-                    /*console.log("row", row);
-                    console.log("data", data);
-                    console.log("index", index);*/
                 }
             });
     } else {
@@ -69,7 +69,9 @@ var drawImportedTable = function (receivedData) {
         licensePlatesInput.val(currentRowData.licensePlates);
         placeInput.val(currentRowData.place);
         entryId = currentRowData.id;
-        loadId = currentRowData.loadId;
+//        loadId = currentRowData.loadId;
+        vehicle = currentRowData.vehicle;
+        order = currentRowData.order;
         dialog.dialog('open');
     });
 
@@ -81,19 +83,23 @@ $("#updateForm").on("submit", function(event) {
         obj[item.name] = item.value;
         return obj;
     }, {});
-    formData.id = entryId;
+    formData.id = order =! 1 ? entryId : null;
     formData.loadId = loadId;
-    $.ajax({
-        url: 'csv_update.php',
+    formData.vehicle = vehicle;
+    console.log("formData", formData);
+    /*$.ajax({
+        url: 'auto_data_update.php',
         method: 'POST',
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify(formData),
         success: function (e) {
+            console.log(e);
             dialog.dialog("close");
             drawImportedTable(e);
         }
-    });
+    });*/
+
     return false;
 });
 
@@ -233,8 +239,8 @@ var handleLastUsedFilesClicks = function (dataTable) {
            },
            method: 'POST',
            success: function (m) {
-
-               console.log("m", m);
+               loadId = currentRowData.id;
+               //console.log("m", m);
                window.drawImportedTable(JSON.parse(m));
            }
         });

@@ -3,7 +3,7 @@ require_once('FuelLoad.php');
 $dbc = mysqli_connect( 'localhost', 'root', '', 'university_project' );
 mysqli_set_charset($dbc, "utf8");
 $inputJSON = file_get_contents('php://input');
-$input = json_decode($inputJSON); //convert JSON into array
+$input = json_decode($inputJSON);
 $query = $dbc->prepare(
 	"UPDATE prad_d SET
  	Lie_d = ? ,

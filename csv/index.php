@@ -41,10 +41,11 @@
                 <tr>
                     <th>Valst. nr.</th>
                     <th>Lik. mėn. pab. "Bakas 1"</th>
-                    <th>Lik. mėn. pab. "Bakas 2"</th>
-                    <th>Spidometro dab. par.</th>
                     <th>Lik. mėn. prad. "Bakas 1"</th>
+                    <th>Lik. mėn. pab. "Bakas 2"</th>
                     <th>Lik. mėn. prad. "Bakas 2"</th>
+                    <th>Spidometro mėn pab. par.</th>
+                    <th>Spidometro mėn prad. par.</th>
                     <th>Vairuotojas</th>
                 </tr>
                 </thead>
@@ -52,10 +53,11 @@
                 <tr>
                     <th>Valst. nr.</th>
                     <th>Lik. mėn. pab. "Bakas 1"</th>
-                    <th>Lik. mėn. pab. "Bakas 2"</th>
-                    <th>Spidometro dab. par.</th>
                     <th>Lik. mėn. prad. "Bakas 1"</th>
+                    <th>Lik. mėn. pab. "Bakas 2"</th>
                     <th>Lik. mėn. prad. "Bakas 2"</th>
+                    <th>Spidometro mėn pab. par.</th>
+                    <th>Spidometro mėn prad. par.</th>
                     <th>Vairuotojas</th>
                 </tr>
                 </tfoot>
@@ -89,10 +91,10 @@
                     <tr>
                         <td>Valst. nr.</td>
                         <td>Likutis mėnesio pabaigoje „Bakas 1“</td>
-                        <td>Likutis mėnesio pabaigoje „Bakas 2“</td>
-                        <td>Spidometro dabartiniai parodymai</td>
                         <td>Likutis mėnesio pradžioje „Bakas 1“ </td>
+                        <td>Likutis mėnesio pabaigoje „Bakas 2“</td>
                         <td>Likutis mėnesio pradžioje „Bakas 2“</td>
+                        <td>Spidometro dabartiniai parodymai</td>
                         <td>Spidometro parodymai mėnesio pradžioje</td>
                         <td>Vairuotojas</td>
                     </tr>
@@ -143,27 +145,31 @@
     <form role="form" id="updateForm">
         <div class="form-group">
             <label>Lik. mėn. pab. "Bakas 1"</label>
-            <input type="text" class="form-control" name="firstTankMonthEnd" id="firstTankMonthEnd"/>
-        </div>
-        <div class="form-group">
-            <label>Lik. mėn. pab. "Bakas 2"</label>
-            <input type="text" class="form-control" name="secondTankMonthEnd" id="secondTankMonthEnd"/>
-        </div>
-        <div class="form-group">
-            <label>Spidometro dab. par.</label>
-            <input type="text" class="form-control" name="speedometerMonthEnd" id="speedometerMonthEnd" />
+            <input required type="number" class="form-control" name="firstTankMonthEnd" id="firstTankMonthEnd"/>
         </div>
         <div class="form-group">
             <label>Lik. mėn. prad. "Bakas 1"</label>
-            <input type="text" class="form-control" name="firstTankMonthStart" id="firstTankMonthStart" />
+            <input required type="number" class="form-control" name="firstTankMonthStart" id="firstTankMonthStart" />
+        </div>
+        <div class="form-group">
+            <label>Lik. mėn. pab. "Bakas 2"</label>
+            <input required type="number" class="form-control" name="secondTankMonthEnd" id="secondTankMonthEnd"/>
         </div>
         <div class="form-group">
             <label>Lik. mėn. prad. "Bakas 2"</label>
-            <input type="text" class="form-control" name="secondTankMonthStart" id="secondTankMonthStart"/>
+            <input required type="number" class="form-control" name="secondTankMonthStart" id="secondTankMonthStart"/>
+        </div>
+        <div class="form-group">
+            <label>Spidometro mėn. prad. par.</label>
+            <input required type="number" class="form-control" name="speedometerMonthStart" id="speedometerMonthStart" />
+        </div>
+        <div class="form-group">
+            <label>Spidometro mėn. pab. par.</label>
+            <input required type="number" class="form-control" name="speedometerMonthEnd" id="speedometerMonthEnd" />
         </div>
         <div class="form-group">
             <label>Vairuotojas</label>
-            <input type="text" class="form-control" name="driver" id="driver"/>
+            <input required type="text" class="form-control" name="driver" id="driver"/>
         </div>
         <div class="btn-group">
             <button class="btn btn-success" id="dialogUpdate">Saugoti</button>
