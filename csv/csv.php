@@ -44,7 +44,7 @@ if ( ! $load_id ) {
 }
 mysqli_close( $dbc );
 
-$dbc = mysqli_connect( 'localhost', 'root', '', 'university_project' );
+/*$dbc = mysqli_connect( 'localhost', 'root', '', 'university_project' );
 if ( isset( $load_id ) ) {
 	$query = 'SELECT  t.Lie_d,  Max(salis) as Lan, Nam, sum(Men_suma) as Men_suma,  max(Blue_suma) as Blue_suma, max(kodas) as kodas from
 (
@@ -57,7 +57,7 @@ if ( isset( $load_id ) ) {
 		left join kol_kodai on SUBSTRING(sst,1,4)=kodas
 		where replace(Ken," ","") = "' . str_replace( ' ', '', $_POST['auto'] ) . '"
                     /*TRINTI PO 2016 06 01 and War in ("0009 DIESEL","0036 EURO 95 (SUPER)","0028 TRUCK DIESEL", "0000 DIESEL")*/
-		and SUBSTRING(War,1,4) in ("0009","0036","0028","0000","0033","0048")
+		/*and SUBSTRING(War,1,4) in ("0009","0036","0028","0000","0033","0048")
                 and load_id=' . $load_id . '
 		group by Lie_d, Lan, Nam,kodas
 
@@ -80,7 +80,7 @@ group by t.Lie_d, t.Nam';
 } else {
 	echo( "Error description: " . mysqli_error( $dbc ) );
 }
-$result      = @mysqli_query( $dbc, $query );
+$result      = @mysqli_query( $dbc, $query );*/
 
 /*header("Content-type: text/csv");
 header("Content-Disposition: attachment; filename=".$_POST['auto'].".csv");

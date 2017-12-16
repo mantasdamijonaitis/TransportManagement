@@ -21,7 +21,7 @@
         .selectedFile {
             background-color: #96beff;
         }
-        #dialogReport {
+        #dialogReport , #completeReport{
             color: white;
         }
     </style>
@@ -41,7 +41,7 @@
             </table>
         </div>
         <div class="row" id="table-row" style="display: none">
-            <h3>Iš CSV failo gautos reikšmės</h3>
+            <h3>Importo duomenų papildymas</h3>
             <table id="dataDisplay" class="display table table-bordered table-responsive table-hover">
                 <thead>
                 <tr>
@@ -68,6 +68,7 @@
                 </tr>
                 </tfoot>
             </table>
+            <a class="btn btn-primary" id="completeReport">Bendra užkrovimo ataskaita</a>
         </div>
     </div>
     <h3>Naujo CSV failo įkėlimas</h3>
@@ -82,68 +83,11 @@
             <form id="fileForm" method="post" enctype="multipart/form-data" action="csv.php" target="csviukas">
                 <div class="form-group">
                     <input name="csv" type="file" /> <br>
-                    <input name="auto" type="text" value="HUT662" class="form-control"/> <br>
                     <input name="ok" type="submit" value="Ikelti" class="btn btn-default" /> <br>
                     <iframe name="csviukas" style="visibility:hidden;display:none"></iframe>
                 </div>
             </form>
         </div>
-    </div>
-    <h3>Automobilio ataskaita</h3>
-    <div class="row">
-        <form>
-            <table class="table table-bordered table-responsive">
-                <thead>
-                    <tr>
-                        <td>Valst. nr.</td>
-                        <td>Likutis mėnesio pabaigoje „Bakas 1“</td>
-                        <td>Likutis mėnesio pradžioje „Bakas 1“ </td>
-                        <td>Likutis mėnesio pabaigoje „Bakas 2“</td>
-                        <td>Likutis mėnesio pradžioje „Bakas 2“</td>
-                        <td>Spidometro dabartiniai parodymai</td>
-                        <td>Spidometro parodymai mėnesio pradžioje</td>
-                        <td>Vairuotojas</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input class="form-control" /></td>
-                        <td><input class="form-control" /></td>
-                        <td><input class="form-control" /></td>
-                        <td><input class="form-control" /></td>
-                        <td><input class="form-control" /></td>
-                        <td><input class="form-control" /></td>
-                        <td><input class="form-control" /></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="btn-group">
-                <button class="btn btn-primary">Skaičiuoti</button>
-                <button class="btn btn-success">Kitas</button>
-                <button class="btn btn-warning">Praleisti</button>
-            </div>
-        </form>
-        <h4>Skaičiavimo rezultatai</h4>
-        <table class="table table-bordered table-hover table-striped table-responsive">
-            <thead>
-                <tr>
-                    <td>Faktiškai sunaudota kuro</td>
-                    <td>Nuvažiuota kilometrų</td>
-                    <td>Kuro vidurkis 100 km</td>
-                    <td>Bendras bakų likutis</td>
-                    <td>Ataskaitos pildymo data</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 

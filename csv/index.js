@@ -32,14 +32,12 @@ var drawAutoData = function (currentLoadId) {
         method: 'POST',
         success: function (m) {
             loadId = currentLoadId;
-            //console.log("m", m);
             window.drawImportedTable(JSON.parse(m));
         }
     });
 };
 
 var drawImportedTable = function (receivedData) {
-    //console.log("receivedData", receivedData);
     var dataDisplay = $("#table-row");
     dataDisplay.css("display", "block")
     if (window.importsTable == null) {
@@ -58,7 +56,6 @@ var drawImportedTable = function (receivedData) {
                 ],
                 "rowCallback": function(row, data, index) {
                     var classToAdd = "";
-                    console.log("data order", data.order);
                     switch (data.order) {
                         case 0:
                             classToAdd = "currentLoadFill"
@@ -101,10 +98,8 @@ var drawImportedTable = function (receivedData) {
             + currentRowData.loadId + "&vehicle="
             + currentRowData.vehicle);
         entryId = currentRowData.id;
-        console.log("entryId", entryId);
         vehicle = currentRowData.vehicle;
         elOrder = currentRowData.order;
-        console.log("setOrder", currentRowData.order);
         dialog.dialog('open');
     });
 
@@ -112,7 +107,6 @@ var drawImportedTable = function (receivedData) {
 
 $("#updateForm").on("submit", function(event) {
     event.preventDefault();
-    console.log("qweqweqweq", elOrder);
 
     var existingFormData = {
         id: elOrder != 1 ? entryId : null,
@@ -121,7 +115,6 @@ $("#updateForm").on("submit", function(event) {
     };
 
     var formData = $('#updateForm').serializeArray().reduce(function(obj, item) {
-        console.log("item.name", item.name);
         obj[item.name] = item.value;
         return obj;
     }, {});
@@ -134,13 +127,8 @@ $("#updateForm").on("submit", function(event) {
         /*dataType: "json",*/
         data: JSON.stringify(existingFormData),
         success: function (e) {
-            console.log("success");
-            console.log("dialog", dialog);
             dialog.dialog("close");
             drawAutoData(existingFormData.loadId);
-        }, error: function (e) {
-            console.log("error");
-            console.log("e", e);
         }
     });
     return false;
@@ -188,7 +176,6 @@ var allowImport = function(formData, type) {
         type: type,
         url: 'csv_check.php',
         success: function (response) {
-            console.log("re", response);
             var receivedData = JSON.parse(response);
             if (receivedData.message) {
                 var receivedData = JSON.parse(response);
@@ -241,18 +228,6 @@ $("#fileForm").submit(function (event) {
     if (allowImport(formData, type)) {
         performImport(formData, type, action);
     }
-
-    /*$.ajax({
-        processData: false,
-        contentType: false,
-        data: new FormData($("#fileForm")[0]),
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
-        success: function (response) {
-            var objResponse = JSON.parse(response);
-            window.drawImportedTable(objResponse);
-        }
-    });*/
     return false;
 });
 
@@ -263,6 +238,7 @@ var handleLastUsedFilesClicks = function (dataTable) {
         $(".even").removeClass("selectedFile");
         $(e.target).parent().addClass("selectedFile");
         $(dataTable.row(this)).addClass("selectedFile");
+        $("#completeReport").attr("href", "auto_report_archive.php?loadId=" + currentRowData.id);
         drawAutoData(currentRowData.id);
     });
 }
