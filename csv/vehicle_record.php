@@ -40,6 +40,27 @@ class VehicleRecord {
 		return $instance;
 	}
 
+	public static function getDeltaObject($previousDbRow, $currentJson) {
+		var_dump($previousDbRow);
+		echo 'z';
+		$previousRecordInstance = self::fromDatabaseRow($previousDbRow);
+
+		$currentRecordInstance = self::fromJson($currentJson);
+		$currentRecordInstance -> speedometerMonthStart =
+			$currentRecordInstance->speedometerMonthEnd -
+			$previousRecordInstance -> speedometerMonthEnd;
+
+		$currentRecordInstance -> firstTankMonthStart =
+			$currentRecordInstance->firstTankMonthEnd -
+			$previousRecordInstance -> firstTankMonthEnd;
+
+		$currentRecordInstance -> secondTankMonthStart =
+			$currentRecordInstance->secondTankMonthEnd -
+			$previousRecordInstance -> secondTankMonthEnd;
+
+		return $currentRecordInstance;
+	}
+
 	public static function fromLoadIdAndPlates($loadId, $licencePlates) {
 		$instance = new self();
 		$instance -> loadId = $loadId;

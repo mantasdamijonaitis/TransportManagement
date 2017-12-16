@@ -1,3 +1,8 @@
+var elOrder = 0;
+var entryId = "";
+var loadId = "";
+var vehicle = "";
+
 var dialog = $( "#dialog" ).dialog({
     autoOpen: false,
     closeOnEscape: false,
@@ -10,15 +15,13 @@ var confirmDialog = $("#confirm-dialog").dialog({
     open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
 });
 
-var entryId = "";
-var loadId = "";
-var vehicle = "";
-var order = "";
-var dateInput = $("#date");
-var timeInput = $("#time");
-var litersInput = $("#remainingLiters");
-var licensePlatesInput = $("#licensePlates");
-var placeInput = $("#place");
+var firstTankMonthEndInput = $("#firstTankMonthEnd");
+var firstTankMonthStartInput = $("#firstTankMonthStart");
+var secondTankMonthEndInput = $("#secondTankMonthEnd");
+var secondTankMonthStartInput = $("#secondTankMonthStart");
+var speedometerMonthEndInput = $("#speedometerMonthEnd");
+var speedometerMonthStartInput = $("#speedometerMonthStart");
+var driverInput = $("#driver");
 
 var drawImportedTable = function (receivedData) {
     //console.log("receivedData", receivedData);
@@ -63,15 +66,28 @@ var drawImportedTable = function (receivedData) {
 
     $("#dataDisplay").on('click', 'tbody td', function () {
         var currentRowData = window.importsTable.row(this).data();
-        dateInput.val(currentRowData.date);
-        timeInput.val(currentRowData.time);
-        litersInput.val(currentRowData.remainingLiters);
-        licensePlatesInput.val(currentRowData.licensePlates);
-        placeInput.val(currentRowData.place);
+        firstTankMonthEndInput.val(currentRowData.firstTankMonthEnd);
+        firstTankMonthStartInput.val(currentRowData.firstTankMonthStart);
+        secondTankMonthEndInput.val(currentRowData.secondTankMonthEnd);
+        secondTankMonthStartInput.val(currentRowData.secondTankMonthStart);
+        speedometerMonthEndInput.val(currentRowData.speedometerMonthEnd);
+        speedometerMonthStartInput.val(currentRowData.speedometerMonthStart);
+        driverInput.val(currentRowData.driver);
+        console.log("order", elOrder);
+        if (currentRowData.order == 1) {
+            firstTankMonthStartInput.attr("readonly", true);
+            secondTankMonthStartInput.attr("readonly", true);
+            speedometerMonthStartInput.attr("readonly", true);
+        } else {
+            firstTankMonthStartInput.removeAttr("readonly");
+            secondTankMonthStartInput.removeAttr("readonly");
+            speedometerMonthStartInput.removeAttr("readonly");
+        }
         entryId = currentRowData.id;
-//        loadId = currentRowData.loadId;
+        console.log("entryId", entryId);
         vehicle = currentRowData.vehicle;
-        order = currentRowData.order;
+        elOrder = currentRowData.order;
+        console.log("setOrder", currentRowData.order);
         dialog.dialog('open');
     });
 
@@ -79,27 +95,33 @@ var drawImportedTable = function (receivedData) {
 
 $("#updateForm").on("submit", function(event) {
     event.preventDefault();
+    console.log("qweqweqweq", elOrder);
+
+    var existingFormData = {
+        id: elOrder != 1 ? entryId : null,
+        loadId: loadId,
+        vehicle: vehicle
+    };
+
     var formData = $('#updateForm').serializeArray().reduce(function(obj, item) {
+        console.log("item.name", item.name);
         obj[item.name] = item.value;
         return obj;
     }, {});
-    formData.id = order =! 1 ? entryId : null;
-    formData.loadId = loadId;
-    formData.vehicle = vehicle;
-    console.log("formData", formData);
-    /*$.ajax({
+
+    $.extend(existingFormData, formData);
+    $.ajax({
         url: 'auto_data_update.php',
         method: 'POST',
         contentType: "application/json",
         dataType: "json",
-        data: JSON.stringify(formData),
+        data: JSON.stringify(existingFormData),
         success: function (e) {
             console.log(e);
             dialog.dialog("close");
             drawImportedTable(e);
         }
-    });*/
-
+    });
     return false;
 });
 

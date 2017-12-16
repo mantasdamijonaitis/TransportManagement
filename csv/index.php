@@ -160,12 +160,12 @@
             <input required type="number" class="form-control" name="secondTankMonthStart" id="secondTankMonthStart"/>
         </div>
         <div class="form-group">
-            <label>Spidometro mėn. prad. par.</label>
-            <input required type="number" class="form-control" name="speedometerMonthStart" id="speedometerMonthStart" />
-        </div>
-        <div class="form-group">
             <label>Spidometro mėn. pab. par.</label>
             <input required type="number" class="form-control" name="speedometerMonthEnd" id="speedometerMonthEnd" />
+        </div>
+        <div class="form-group">
+            <label>Spidometro mėn. prad. par.</label>
+            <input required type="number" class="form-control" name="speedometerMonthStart" id="speedometerMonthStart" />
         </div>
         <div class="form-group">
             <label>Vairuotojas</label>
