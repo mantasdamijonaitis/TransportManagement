@@ -13,12 +13,19 @@ class VehicleRecord {
 	public $secondTankMonthStart= 0;
 	public $driver = "";
 	public $order = "";
+	public $fileName = "";
 
 	public static function fromDatabaseRow($result) {
 		$instance = new self();
-		$instance -> id = $result['Id'];
-		$instance -> vehicle = $result['Vehicle'];
-		$instance -> loadId = $result['LoadId'];
+		if (array_key_exists('Id', $result)) {
+			$instance->id = $result['Id'];
+		}
+		if (array_key_exists('Vehicle', $result)) {
+			$instance->vehicle = $result['Vehicle'];
+		}
+		if (array_key_exists('LoadId', $result)) {
+			$instance->loadId = $result['LoadId'];
+		}
 		$instance -> firstTankMonthEnd = $result['FirstTankMonthEnd'];
 		$instance -> secondTankMonthEnd = $result['SecondTankMonthEnd'];
 		$instance -> speedometerMonthEnd = $result['SpeedometerMonthEnd'];
@@ -41,8 +48,6 @@ class VehicleRecord {
 	}
 
 	public static function getDeltaObject($previousDbRow, $currentJson) {
-		var_dump($previousDbRow);
-		echo 'z';
 		$previousRecordInstance = self::fromDatabaseRow($previousDbRow);
 
 		$currentRecordInstance = self::fromJson($currentJson);
@@ -80,6 +85,12 @@ class VehicleRecord {
 		$instance -> firstTankMonthStart = $result -> firstTankMonthStart;
 		$instance -> secondTankMonthStart = $result -> secondTankMonthStart;
 		$instance -> driver = $result -> driver;
+		return $instance;
+	}
+
+	public static function fromReportRow($row) {
+		$instance = self::fromDatabaseRow($row);
+		$instance -> fileName = $row['filename'];
 		return $instance;
 	}
 

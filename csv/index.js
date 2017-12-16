@@ -88,7 +88,6 @@ var drawImportedTable = function (receivedData) {
         speedometerMonthEndInput.val(currentRowData.speedometerMonthEnd);
         speedometerMonthStartInput.val(currentRowData.speedometerMonthStart);
         driverInput.val(currentRowData.driver);
-        console.log("order", elOrder);
         if (currentRowData.order == 1) {
             firstTankMonthStartInput.attr("readonly", true);
             secondTankMonthStartInput.attr("readonly", true);
@@ -98,6 +97,9 @@ var drawImportedTable = function (receivedData) {
             secondTankMonthStartInput.removeAttr("readonly");
             speedometerMonthStartInput.removeAttr("readonly");
         }
+        $("#dialogReport").attr("href", "auto_report.php?loadId="
+            + currentRowData.loadId + "&vehicle="
+            + currentRowData.vehicle);
         entryId = currentRowData.id;
         console.log("entryId", entryId);
         vehicle = currentRowData.vehicle;
@@ -142,22 +144,6 @@ $("#updateForm").on("submit", function(event) {
         }
     });
     return false;
-});
-
-$("#dialogDelete").on("click", function (e) {
-    e.preventDefault();
-    $.ajax({
-        url: 'csv_delete.php',
-        method: 'POST',
-        data: {
-            id: entryId,
-            loadId: loadId
-        },
-        success: function (e) {
-            drawImportedTable(JSON.parse(e));
-            dialog.dialog("close");
-        }
-    })
 });
 
 $("#dialogCancel").on("click", function(e){

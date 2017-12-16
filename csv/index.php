@@ -21,6 +21,9 @@
         .selectedFile {
             background-color: #96beff;
         }
+        #dialogReport {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -176,7 +179,7 @@
         </div>
         <div class="btn-group">
             <button class="btn btn-success" id="dialogUpdate">Saugoti</button>
-            <button class="btn btn-danger" id="dialogDelete">Šalinti</button>
+            <a class="btn btn-info" id="dialogReport">Ataskaita</a>
             <button class="btn btn-primary" id="dialogCancel">Atšaukti</button>
         </div>
     </form>
