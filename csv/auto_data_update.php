@@ -54,9 +54,6 @@ if (empty($autoDataJsonRecord->id)) {
 								SecondTankMonthEnd = ?
 								WHERE Id = ?");
 
-				echo 'before';
-				var_dump($recordToUpdate);
-
 				$recordToUpdate->speedometerMonthStart =
 					$recordToUpdate->speedometerMonthStart +
 					$deltaObject -> speedometerMonthStart;
@@ -78,9 +75,6 @@ if (empty($autoDataJsonRecord->id)) {
 				$recordToUpdate->secondTankMonthEnd =
 					$recordToUpdate->secondTankMonthEnd +
 					$deltaObject -> secondTankMonthStart;
-
-				echo 'after';
-				var_dump($recordToUpdate);
 
 				$updateQuery->bind_param('ddddddi',
 					$recordToUpdate->speedometerMonthStart,

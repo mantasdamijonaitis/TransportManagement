@@ -23,6 +23,21 @@ var speedometerMonthEndInput = $("#speedometerMonthEnd");
 var speedometerMonthStartInput = $("#speedometerMonthStart");
 var driverInput = $("#driver");
 
+var drawAutoData = function (currentLoadId) {
+    $.ajax({
+        url: 'cars_of_load.php',
+        data: {
+            loadId: currentLoadId
+        },
+        method: 'POST',
+        success: function (m) {
+            loadId = currentLoadId;
+            //console.log("m", m);
+            window.drawImportedTable(JSON.parse(m));
+        }
+    });
+};
+
 var drawImportedTable = function (receivedData) {
     //console.log("receivedData", receivedData);
     var dataDisplay = $("#table-row");
@@ -114,12 +129,16 @@ $("#updateForm").on("submit", function(event) {
         url: 'auto_data_update.php',
         method: 'POST',
         contentType: "application/json",
-        dataType: "json",
+        /*dataType: "json",*/
         data: JSON.stringify(existingFormData),
         success: function (e) {
-            console.log(e);
+            console.log("success");
+            console.log("dialog", dialog);
             dialog.dialog("close");
-            drawImportedTable(e);
+            drawAutoData(existingFormData.loadId);
+        }, error: function (e) {
+            console.log("error");
+            console.log("e", e);
         }
     });
     return false;
@@ -252,20 +271,13 @@ $("#fileForm").submit(function (event) {
 });
 
 var handleLastUsedFilesClicks = function (dataTable) {
-    $("#filesDisplay").on('click', 'tbody td', function () {
+    $("#filesDisplay").on('click', 'tbody td', function (e) {
         var currentRowData = dataTable.row(this).data();
-        $.ajax({
-           url: 'cars_of_load.php',
-           data: {
-               loadId: currentRowData.id
-           },
-           method: 'POST',
-           success: function (m) {
-               loadId = currentRowData.id;
-               //console.log("m", m);
-               window.drawImportedTable(JSON.parse(m));
-           }
-        });
+        $(".odd").removeClass("selectedFile");
+        $(".even").removeClass("selectedFile");
+        $(e.target).parent().addClass("selectedFile");
+        $(dataTable.row(this)).addClass("selectedFile");
+        drawAutoData(currentRowData.id);
     });
 }
 

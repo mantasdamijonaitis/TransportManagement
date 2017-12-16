@@ -18,6 +18,9 @@
         .notFilled {
             background-color: #d9534f;
         }
+        .selectedFile {
+            background-color: #96beff;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +28,7 @@
     <h3>Failai, su kuriais buvo dirbama per paskutines 21 dienas</h3>
     <div class="row">
         <div class="row" id="last_files_row" style="display: none">
-            <table id="filesDisplay" class="display table table-bordered table-responsive table-hover table-striped">
+            <table id="filesDisplay" class="display table table-bordered table-responsive table-hover">
                 <thead>
                     <tr>
                         <th>Įkėlimo data</th>
